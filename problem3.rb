@@ -9,16 +9,24 @@
 
 =end
 
-#lets find the largest 
-#prime factor of 147 = 3*7*7
-#which is 7
-
-number = 147
-
-(2..100).each do |i|
-
-	 if number % i == 0
-	 	puts "#{i}\n"
-	 end
-
+# defines constant N whose prime factors will be found
+N = 600851475143
+compare = N
+largestFactor = 0
+ 
+counter = 2
+while (counter * counter) < compare
+    if (compare % counter == 0) 
+        compare = compare / counter
+        largestFactor = counter
+    else 
+        counter++
+    end
 end
+
+if (compare > largestFactor) 
+	#the remainder is a prime number
+    largestFactor = compare
+end
+
+puts "The largest factor is #{largestFactor}"
