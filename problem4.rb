@@ -21,17 +21,22 @@ p = 0
 
 		# figure out whether
 		# i*j is a palindrome
-		isp = i*j
-		isp = isp.to_s
+		product = i*j
+		product = product.to_s
 
-		if isp = isp.reverse
+		if product == product.reverse
 			
-			isp = isp.to_i
+			reverse = product.reverse
 
-			# is isp larger than 
+			product = product.to_i
+
+			# is product larger than 
 			# the previous palindrome?
-			if isp > p
-				p = isp
+			if product > p
+
+				puts "product: #{product}\n"
+				puts "product reverse: #{reverse}\n\n\n"
+				p = product
 			end
 		end
 	end
