@@ -20,7 +20,7 @@ while (counter * counter) < compare
         compare = compare / counter
         largestFactor = counter
     else 
-        counter++
+        counter += 1
     end
 end
 
