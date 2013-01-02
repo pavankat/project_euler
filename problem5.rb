@@ -17,12 +17,13 @@ by all of the numbers from 1 to 20?
 # initialize 
 smallest = 3628800
 
-(3628800..20).each do |i|
-	
-	# initialize 
-	a = true
+(20..3628800).each do |i|
 
-	(2..10).each do |j|
+	# go through numbers 1 through 10
+	(1..10).each do |j| 
+
+		# if 1-10 are factors of j
+		# then a is false
 		if i % j != 0
 			a = false
 		end
@@ -35,4 +36,5 @@ smallest = 3628800
 	end
 end
 
+# should return 2520
 puts "smallest number #{smallest}"
