@@ -19,3 +19,21 @@ squares of the first one hundred natural numbers
 and the square of the sum.
 
 =end
+
+squaresum = 0
+
+(1..100).each do |i|
+	squaresum += i**2 
+end
+
+sumsquare = 0
+
+(1..100).each do |j|
+	sumsquare += j
+end
+
+sumsquare = sumsquare**2 
+
+answer = sumsquare - squaresum
+
+puts answer
